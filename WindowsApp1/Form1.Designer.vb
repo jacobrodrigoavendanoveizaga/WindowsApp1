@@ -23,7 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.LabelConectionStatus = New System.Windows.Forms.Label()
         Me.LabelDataTime = New System.Windows.Forms.Label()
         Me.PanelConnection = New System.Windows.Forms.Panel()
@@ -69,15 +69,15 @@ Partial Class Form1
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PanelRegistrationandEditUserData = New System.Windows.Forms.Panel()
         Me.TextBoxObservations = New System.Windows.Forms.TextBox()
+        Me.PanelReadingTagProcess = New System.Windows.Forms.Panel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.ButtonCloseReadingTag = New System.Windows.Forms.Button()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.TextBoxAddress = New System.Windows.Forms.TextBox()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.TextBoxMail = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
-        Me.PanelReadingTagProcess = New System.Windows.Forms.Panel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.ButtonCloseReadingTag = New System.Windows.Forms.Button()
-        Me.Label16 = New System.Windows.Forms.Label()
         Me.TextBoxCu = New System.Windows.Forms.TextBox()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.TextBoxSurname = New System.Windows.Forms.TextBox()
@@ -644,6 +644,51 @@ Partial Class Form1
         Me.TextBoxObservations.Size = New System.Drawing.Size(439, 20)
         Me.TextBoxObservations.TabIndex = 27
         '
+        'PanelReadingTagProcess
+        '
+        Me.PanelReadingTagProcess.Controls.Add(Me.PictureBox2)
+        Me.PanelReadingTagProcess.Controls.Add(Me.ButtonCloseReadingTag)
+        Me.PanelReadingTagProcess.Controls.Add(Me.Label16)
+        Me.PanelReadingTagProcess.Location = New System.Drawing.Point(141, 326)
+        Me.PanelReadingTagProcess.Name = "PanelReadingTagProcess"
+        Me.PanelReadingTagProcess.Size = New System.Drawing.Size(187, 165)
+        Me.PanelReadingTagProcess.TabIndex = 17
+        Me.PanelReadingTagProcess.Visible = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.WindowsApp1.My.Resources.Resources.__Iphone_spinner_1
+        Me.PictureBox2.Location = New System.Drawing.Point(41, 55)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(96, 92)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox2.TabIndex = 20
+        Me.PictureBox2.TabStop = False
+        '
+        'ButtonCloseReadingTag
+        '
+        Me.ButtonCloseReadingTag.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.klipartz_com
+        Me.ButtonCloseReadingTag.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ButtonCloseReadingTag.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.ButtonCloseReadingTag.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ButtonCloseReadingTag.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke
+        Me.ButtonCloseReadingTag.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonCloseReadingTag.ImageKey = "(ninguno)"
+        Me.ButtonCloseReadingTag.Location = New System.Drawing.Point(163, 3)
+        Me.ButtonCloseReadingTag.Name = "ButtonCloseReadingTag"
+        Me.ButtonCloseReadingTag.Size = New System.Drawing.Size(21, 19)
+        Me.ButtonCloseReadingTag.TabIndex = 19
+        Me.ButtonCloseReadingTag.UseVisualStyleBackColor = True
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(8, 9)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(115, 13)
+        Me.Label16.TabIndex = 18
+        Me.Label16.Text = "Lectura etiqueta Rfid..."
+        '
         'Label21
         '
         Me.Label21.AutoSize = True
@@ -690,51 +735,6 @@ Partial Class Form1
         Me.Label19.Size = New System.Drawing.Size(99, 13)
         Me.Label19.TabIndex = 22
         Me.Label19.Text = "Correo electrónico :"
-        '
-        'PanelReadingTagProcess
-        '
-        Me.PanelReadingTagProcess.Controls.Add(Me.PictureBox2)
-        Me.PanelReadingTagProcess.Controls.Add(Me.ButtonCloseReadingTag)
-        Me.PanelReadingTagProcess.Controls.Add(Me.Label16)
-        Me.PanelReadingTagProcess.Location = New System.Drawing.Point(141, 326)
-        Me.PanelReadingTagProcess.Name = "PanelReadingTagProcess"
-        Me.PanelReadingTagProcess.Size = New System.Drawing.Size(187, 165)
-        Me.PanelReadingTagProcess.TabIndex = 17
-        Me.PanelReadingTagProcess.Visible = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.WindowsApp1.My.Resources.Resources.__Iphone_spinner_1
-        Me.PictureBox2.Location = New System.Drawing.Point(41, 55)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(96, 92)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.PictureBox2.TabIndex = 20
-        Me.PictureBox2.TabStop = False
-        '
-        'ButtonCloseReadingTag
-        '
-        Me.ButtonCloseReadingTag.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.klipartz_com
-        Me.ButtonCloseReadingTag.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ButtonCloseReadingTag.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.ButtonCloseReadingTag.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ButtonCloseReadingTag.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke
-        Me.ButtonCloseReadingTag.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonCloseReadingTag.ImageKey = "(ninguno)"
-        Me.ButtonCloseReadingTag.Location = New System.Drawing.Point(163, 3)
-        Me.ButtonCloseReadingTag.Name = "ButtonCloseReadingTag"
-        Me.ButtonCloseReadingTag.Size = New System.Drawing.Size(21, 19)
-        Me.ButtonCloseReadingTag.TabIndex = 19
-        Me.ButtonCloseReadingTag.UseVisualStyleBackColor = True
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(8, 9)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(115, 13)
-        Me.Label16.TabIndex = 18
-        Me.Label16.Text = "Lectura etiqueta Rfid..."
         '
         'TextBoxCu
         '
@@ -811,14 +811,14 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.Silver
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.ContextMenuStrip = Me.ContextMenuStrip1
         Me.DataGridView1.Location = New System.Drawing.Point(18, 54)
@@ -937,7 +937,7 @@ Partial Class Form1
         'LabelGetID
         '
         Me.LabelGetID.AutoSize = True
-        Me.LabelGetID.Location = New System.Drawing.Point(30, 78)
+        Me.LabelGetID.Location = New System.Drawing.Point(35, 81)
         Me.LabelGetID.Name = "LabelGetID"
         Me.LabelGetID.Size = New System.Drawing.Size(67, 13)
         Me.LabelGetID.TabIndex = 16
