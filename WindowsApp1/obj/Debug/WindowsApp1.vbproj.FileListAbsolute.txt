@@ -82,3 +82,5 @@ C:\Users\pikachu\Desktop\ProyectoFIMEE\WindowsApp1\WindowsApp1\bin\Debug\Google.
 C:\Users\pikachu\Desktop\ProyectoFIMEE\WindowsApp1\WindowsApp1\bin\Debug\MySql.Data.xml
 C:\Users\pikachu\Desktop\ProyectoFIMEE\WindowsApp1\WindowsApp1\bin\Debug\MySql.Data.Entity.EF5.xml
 C:\Users\pikachu\Desktop\ProyectoFIMEE\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.CopyComplete
+C:\Users\pikachu\Desktop\ProyectoFIMEE\WindowsApp1\WindowsApp1\bin\Debug\DPFPDevNET.dll
+C:\Users\pikachu\Desktop\ProyectoFIMEE\WindowsApp1\WindowsApp1\bin\Debug\DPFPShrNET.dll

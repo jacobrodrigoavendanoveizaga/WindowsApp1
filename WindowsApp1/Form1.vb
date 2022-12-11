@@ -1,6 +1,10 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports DPFP
+Imports DPFP.Capture
 
 Public Class Form1
+
+    Implements DPFP.Capture.EventHandler
 
     'server=localhost; user=yout_database_user; password=your_database_password; database=your_database_name
     Dim Connection As New MySqlConnection("server=localhost; port=3306; user=root; password=root; database=fimeeproverfid")
@@ -20,12 +24,19 @@ Public Class Form1
     Dim GetID As Boolean = False
     Dim ViewUserData As Boolean = False
 
+
+
+
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.CenterToScreen()
         PanelConnection.Visible = True
         PanelUserData.Visible = False
         PanelRegistrationandEditUserData.Visible = False
         ComboBoxBaudRate.SelectedIndex = 3
+
+        Init()
+        iniciarCaptura()
     End Sub
 
     Private Sub ShowData()
@@ -754,6 +765,73 @@ Public Class Form1
         PanelReadingTagProcess.Visible = False
         ButtonScanID.Enabled = True
     End Sub
+
+    'CODIGO DEL LECTOR DE HUELLAS
+
+    Private Captura As DPFP.Capture.Capture
+
+    Protected Overridable Sub Init()
+        Try
+            Captura = New Capture()
+            If Not Captura Is Nothing Then
+                Captura.EventHandler = Me
+            Else
+                MessageBox.Show("No se puede instanciar la captura")
+            End If
+        Catch ex As Exception
+            MessageBox.Show("No se pudo inicializar la captura")
+        End Try
+    End Sub
+
+    Protected Sub iniciarCaptura()
+        If Not Captura Is Nothing Then
+            Try
+                Captura.StartCapture()
+            Catch ex As Exception
+                MessageBox.Show("No se pudo iniciar la captura")
+            End Try
+        End If
+    End Sub
+
+    Protected Sub pararCaptura()
+        If Not Captura Is Nothing Then
+            Try
+                Captura.StopCapture()
+            Catch ex As Exception
+                MessageBox.Show("No se puede detener la captura")
+            End Try
+        End If
+    End Sub
+
+    Private Sub Form1_FormClosed(sebder As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        pararCaptura()
+    End Sub
+
+
+    Public Sub OnComplete(Capture As Object, ReaderSerialNumber As String, Sample As Sample) Implements EventHandler.OnComplete
+
+    End Sub
+
+    Public Sub OnFingerGone(Capture As Object, ReaderSerialNumber As String) Implements EventHandler.OnFingerGone
+
+    End Sub
+
+    Public Sub OnFingerTouch(Capture As Object, ReaderSerialNumber As String) Implements EventHandler.OnFingerTouch
+
+    End Sub
+
+    Public Sub OnReaderConnect(Capture As Object, ReaderSerialNumber As String) Implements EventHandler.OnReaderConnect
+
+    End Sub
+
+    Public Sub OnReaderDisconnect(Capture As Object, ReaderSerialNumber As String) Implements EventHandler.OnReaderDisconnect
+
+    End Sub
+
+    Public Sub OnSampleQuality(Capture As Object, ReaderSerialNumber As String, CaptureFeedback As CaptureFeedback) Implements EventHandler.OnSampleQuality
+
+    End Sub
+
 
     'Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBoxCu.TextChanged
 
