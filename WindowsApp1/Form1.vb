@@ -809,7 +809,7 @@ Public Class Form1
 
 
     Public Sub OnComplete(Capture As Object, ReaderSerialNumber As String, Sample As Sample) Implements EventHandler.OnComplete
-
+        ponerImagen(ConvertirSampleaMapadeBits(Sample))
     End Sub
 
     Public Sub OnFingerGone(Capture As Object, ReaderSerialNumber As String) Implements EventHandler.OnFingerGone
@@ -830,6 +830,17 @@ Public Class Form1
 
     Public Sub OnSampleQuality(Capture As Object, ReaderSerialNumber As String, CaptureFeedback As CaptureFeedback) Implements EventHandler.OnSampleQuality
 
+    End Sub
+
+    Protected Function ConvertirSampleaMapadeBits(ByVal Sample As DPFP.Sample) As Bitmap
+        Dim convertidor As New DPFP.Capture.SampleConversion()
+        Dim mapaBits As Bitmap = Nothing
+        convertidor.ConvertToPicture(Sample, mapaBits)
+        Return mapaBits
+    End Function
+
+    Private Sub ponerImagen(ByVal bmp)
+        imagenHuella.Image = bmp
     End Sub
 
 

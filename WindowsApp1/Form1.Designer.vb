@@ -36,7 +36,6 @@ Partial Class Form1
         Me.PanelUserData = New System.Windows.Forms.Panel()
         Me.GroupBoxImage = New System.Windows.Forms.GroupBox()
         Me.LabelID = New System.Windows.Forms.Label()
-        Me.PictureBoxUserImage = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.LabelObservations = New System.Windows.Forms.Label()
@@ -70,8 +69,6 @@ Partial Class Form1
         Me.PanelRegistrationandEditUserData = New System.Windows.Forms.Panel()
         Me.TextBoxObservations = New System.Windows.Forms.TextBox()
         Me.PanelReadingTagProcess = New System.Windows.Forms.Panel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.ButtonCloseReadingTag = New System.Windows.Forms.Button()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.TextBoxAddress = New System.Windows.Forms.TextBox()
@@ -83,7 +80,6 @@ Partial Class Form1
         Me.TextBoxSurname = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.PictureBoxImagePreview = New System.Windows.Forms.PictureBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -95,7 +91,6 @@ Partial Class Form1
         Me.TextBoxSearch = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.PictureBoxImageInput = New System.Windows.Forms.PictureBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.LabelGetID = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -115,6 +110,8 @@ Partial Class Form1
         Me.TimerSerialIn = New System.Windows.Forms.Timer(Me.components)
         Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.PictureBoxStatusConnect = New System.Windows.Forms.PictureBox()
         Me.PanelMenu = New System.Windows.Forms.Panel()
         Me.PictureBoxLogo = New System.Windows.Forms.PictureBox()
@@ -122,26 +119,33 @@ Partial Class Form1
         Me.ButtonRegistration = New System.Windows.Forms.Button()
         Me.ButtonUserData = New System.Windows.Forms.Button()
         Me.ButtonConnection = New System.Windows.Forms.Button()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.imagenHuella = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.ButtonCloseReadingTag = New System.Windows.Forms.Button()
+        Me.PictureBoxImagePreview = New System.Windows.Forms.PictureBox()
+        Me.PictureBoxImageInput = New System.Windows.Forms.PictureBox()
+        Me.PictureBoxUserImage = New System.Windows.Forms.PictureBox()
         Me.PanelConnection.SuspendLayout()
         Me.PanelUserData.SuspendLayout()
         Me.GroupBoxImage.SuspendLayout()
-        CType(Me.PictureBoxUserImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.PanelRegistrationandEditUserData.SuspendLayout()
         Me.PanelReadingTagProcess.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
-        CType(Me.PictureBoxImagePreview, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
-        CType(Me.PictureBoxImageInput, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
         CType(Me.PictureBoxStatusConnect, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelMenu.SuspendLayout()
         CType(Me.PictureBoxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxSelect, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.imagenHuella, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBoxImagePreview, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBoxImageInput, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBoxUserImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LabelConectionStatus
@@ -282,15 +286,6 @@ Partial Class Form1
         Me.LabelID.Size = New System.Drawing.Size(84, 13)
         Me.LabelID.TabIndex = 2
         Me.LabelID.Text = "ID: __________"
-        '
-        'PictureBoxUserImage
-        '
-        Me.PictureBoxUserImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBoxUserImage.Location = New System.Drawing.Point(20, 36)
-        Me.PictureBoxUserImage.Name = "PictureBoxUserImage"
-        Me.PictureBoxUserImage.Size = New System.Drawing.Size(174, 174)
-        Me.PictureBoxUserImage.TabIndex = 0
-        Me.PictureBoxUserImage.TabStop = False
         '
         'Panel2
         '
@@ -604,6 +599,7 @@ Partial Class Form1
         '
         'PanelRegistrationandEditUserData
         '
+        Me.PanelRegistrationandEditUserData.Controls.Add(Me.GroupBox5)
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.TextBoxObservations)
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.PanelReadingTagProcess)
         Me.PanelRegistrationandEditUserData.Controls.Add(Me.Label21)
@@ -654,31 +650,6 @@ Partial Class Form1
         Me.PanelReadingTagProcess.Size = New System.Drawing.Size(187, 165)
         Me.PanelReadingTagProcess.TabIndex = 17
         Me.PanelReadingTagProcess.Visible = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.WindowsApp1.My.Resources.Resources.__Iphone_spinner_1
-        Me.PictureBox2.Location = New System.Drawing.Point(41, 55)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(96, 92)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.PictureBox2.TabIndex = 20
-        Me.PictureBox2.TabStop = False
-        '
-        'ButtonCloseReadingTag
-        '
-        Me.ButtonCloseReadingTag.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.klipartz_com
-        Me.ButtonCloseReadingTag.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ButtonCloseReadingTag.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.ButtonCloseReadingTag.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ButtonCloseReadingTag.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke
-        Me.ButtonCloseReadingTag.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonCloseReadingTag.ImageKey = "(ninguno)"
-        Me.ButtonCloseReadingTag.Location = New System.Drawing.Point(163, 3)
-        Me.ButtonCloseReadingTag.Name = "ButtonCloseReadingTag"
-        Me.ButtonCloseReadingTag.Size = New System.Drawing.Size(21, 19)
-        Me.ButtonCloseReadingTag.TabIndex = 19
-        Me.ButtonCloseReadingTag.UseVisualStyleBackColor = True
         '
         'Label16
         '
@@ -792,16 +763,6 @@ Partial Class Form1
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Vista de registro"
         '
-        'PictureBoxImagePreview
-        '
-        Me.PictureBoxImagePreview.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBoxImagePreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBoxImagePreview.Location = New System.Drawing.Point(462, 68)
-        Me.PictureBoxImagePreview.Name = "PictureBoxImagePreview"
-        Me.PictureBoxImagePreview.Size = New System.Drawing.Size(84, 84)
-        Me.PictureBoxImagePreview.TabIndex = 22
-        Me.PictureBoxImagePreview.TabStop = False
-        '
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToAddRows = False
@@ -909,17 +870,6 @@ Partial Class Form1
         Me.GroupBox3.TabIndex = 15
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Image"
-        '
-        'PictureBoxImageInput
-        '
-        Me.PictureBoxImageInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBoxImageInput.Image = Global.WindowsApp1.My.Resources.Resources.userimage2
-        Me.PictureBoxImageInput.Location = New System.Drawing.Point(14, 19)
-        Me.PictureBoxImageInput.Name = "PictureBoxImageInput"
-        Me.PictureBoxImageInput.Size = New System.Drawing.Size(88, 83)
-        Me.PictureBoxImageInput.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBoxImageInput.TabIndex = 0
-        Me.PictureBoxImageInput.TabStop = False
         '
         'GroupBox2
         '
@@ -1098,6 +1048,17 @@ Partial Class Form1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
+        'GroupBox5
+        '
+        Me.GroupBox5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox5.Controls.Add(Me.imagenHuella)
+        Me.GroupBox5.Location = New System.Drawing.Point(289, 214)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(119, 109)
+        Me.GroupBox5.TabIndex = 28
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "Huella"
+        '
         'PictureBoxStatusConnect
         '
         Me.PictureBoxStatusConnect.BackColor = System.Drawing.Color.Transparent
@@ -1194,6 +1155,72 @@ Partial Class Form1
         Me.ButtonConnection.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ButtonConnection.UseVisualStyleBackColor = True
         '
+        'imagenHuella
+        '
+        Me.imagenHuella.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.imagenHuella.Image = Global.WindowsApp1.My.Resources.Resources.huella_2
+        Me.imagenHuella.Location = New System.Drawing.Point(14, 19)
+        Me.imagenHuella.Name = "imagenHuella"
+        Me.imagenHuella.Size = New System.Drawing.Size(88, 83)
+        Me.imagenHuella.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.imagenHuella.TabIndex = 0
+        Me.imagenHuella.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.WindowsApp1.My.Resources.Resources.__Iphone_spinner_1
+        Me.PictureBox2.Location = New System.Drawing.Point(41, 55)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(96, 92)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox2.TabIndex = 20
+        Me.PictureBox2.TabStop = False
+        '
+        'ButtonCloseReadingTag
+        '
+        Me.ButtonCloseReadingTag.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.klipartz_com
+        Me.ButtonCloseReadingTag.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ButtonCloseReadingTag.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.ButtonCloseReadingTag.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ButtonCloseReadingTag.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke
+        Me.ButtonCloseReadingTag.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonCloseReadingTag.ImageKey = "(ninguno)"
+        Me.ButtonCloseReadingTag.Location = New System.Drawing.Point(163, 3)
+        Me.ButtonCloseReadingTag.Name = "ButtonCloseReadingTag"
+        Me.ButtonCloseReadingTag.Size = New System.Drawing.Size(21, 19)
+        Me.ButtonCloseReadingTag.TabIndex = 19
+        Me.ButtonCloseReadingTag.UseVisualStyleBackColor = True
+        '
+        'PictureBoxImagePreview
+        '
+        Me.PictureBoxImagePreview.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBoxImagePreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBoxImagePreview.Location = New System.Drawing.Point(462, 68)
+        Me.PictureBoxImagePreview.Name = "PictureBoxImagePreview"
+        Me.PictureBoxImagePreview.Size = New System.Drawing.Size(84, 84)
+        Me.PictureBoxImagePreview.TabIndex = 22
+        Me.PictureBoxImagePreview.TabStop = False
+        '
+        'PictureBoxImageInput
+        '
+        Me.PictureBoxImageInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBoxImageInput.Image = Global.WindowsApp1.My.Resources.Resources.userimage2
+        Me.PictureBoxImageInput.Location = New System.Drawing.Point(14, 19)
+        Me.PictureBoxImageInput.Name = "PictureBoxImageInput"
+        Me.PictureBoxImageInput.Size = New System.Drawing.Size(88, 83)
+        Me.PictureBoxImageInput.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBoxImageInput.TabIndex = 0
+        Me.PictureBoxImageInput.TabStop = False
+        '
+        'PictureBoxUserImage
+        '
+        Me.PictureBoxUserImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBoxUserImage.Location = New System.Drawing.Point(20, 36)
+        Me.PictureBoxUserImage.Name = "PictureBoxUserImage"
+        Me.PictureBoxUserImage.Size = New System.Drawing.Size(174, 174)
+        Me.PictureBoxUserImage.TabIndex = 0
+        Me.PictureBoxUserImage.TabStop = False
+        '
         'Form1
         '
         Me.AccessibleRole = System.Windows.Forms.AccessibleRole.Clock
@@ -1215,27 +1242,29 @@ Partial Class Form1
         Me.PanelUserData.ResumeLayout(False)
         Me.GroupBoxImage.ResumeLayout(False)
         Me.GroupBoxImage.PerformLayout()
-        CType(Me.PictureBoxUserImage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.PanelRegistrationandEditUserData.ResumeLayout(False)
         Me.PanelRegistrationandEditUserData.PerformLayout()
         Me.PanelReadingTagProcess.ResumeLayout(False)
         Me.PanelReadingTagProcess.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
-        CType(Me.PictureBoxImagePreview, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ContextMenuStrip1.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
-        CType(Me.PictureBoxImageInput, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.GroupBox5.ResumeLayout(False)
         CType(Me.PictureBoxStatusConnect, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelMenu.ResumeLayout(False)
         CType(Me.PictureBoxLogo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxSelect, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.imagenHuella, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBoxImagePreview, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBoxImageInput, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBoxUserImage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1340,4 +1369,6 @@ Partial Class Form1
     Friend WithEvents Label32 As Label
     Friend WithEvents Label33 As Label
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents GroupBox5 As GroupBox
+    Friend WithEvents imagenHuella As PictureBox
 End Class
