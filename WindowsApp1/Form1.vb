@@ -769,12 +769,14 @@ Public Class Form1
     'CODIGO DEL LECTOR DE HUELLAS
 
     Private Captura As DPFP.Capture.Capture
+    Private Enroller As DPFP.Processing.Enrollment
 
     Protected Overridable Sub Init()
         Try
             Captura = New Capture()
             If Not Captura Is Nothing Then
                 Captura.EventHandler = Me
+                Enroller = New DPFP.Processing.Enrollment()
             Else
                 MessageBox.Show("No se puede instanciar la captura")
             End If
@@ -843,6 +845,29 @@ Public Class Form1
         imagenHuella.Image = bmp
     End Sub
 
+    Protected Function extraerCaracteristicas(ByVal Sample As DPFP.Sample, ByVal Purpose As DPFP.Processing.DataPurpose) As DPFP.FeatureSet
+        Dim Extractor As New DPFP.Processing.FeatureExtraction
+        Dim alimentacion As DPFP.Capture.CaptureFeedback = DPFP.Capture.CaptureFeedback.None
+        Dim Caracteristicas As New DPFP.FeatureSet()
+        Extractor.CreateFeatureSet(Sample, Purpose, alimentacion, Caracteristicas)
+        If (alimentacion = DPFP.Capture.CaptureFeedback.Good) Then
+            Return Caracteristicas
+        Else
+            Return Nothing
+        End If
+
+    End Function
+
+    Protected Sub Procesar(ByVal Sample As DPFP.Sample)
+        Dim caracteristicas As DPFP.FeatureSet = extraerCaracteristicas(Sample, DPFP.Processing.DataPurpose.Enrollment)
+        If (Not caracteristicas Is Nothing) Then
+            Try
+                Enroller.AddFeatures(caracteristicas)
+            Catch ex As Exception
+
+            End Try
+        End If
+    End Sub
 
     'Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBoxCu.TextChanged
 
