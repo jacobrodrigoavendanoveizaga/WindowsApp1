@@ -1,6 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports DPFP
 Imports DPFP.Capture
+Imports System.Text
 
 Public Class Form1
 
@@ -770,6 +771,16 @@ Public Class Form1
 
     Private Captura As DPFP.Capture.Capture
     Private Enroller As DPFP.Processing.Enrollment
+    Private Delegate Sub _delegadoMuestra(ByVal text As String)
+
+    Private Sub mostrarVeces(ByVal texto As String)
+        If (vecesDedo.InvokeRequired) Then
+            Dim deleg As New _delegadoMuestra(AddressOf mostrarVeces)
+            Me.Invoke(deleg, New Object() {texto})
+        Else
+            vecesDedo.Text = texto
+        End If
+    End Sub
 
     Protected Overridable Sub Init()
         Try
@@ -777,6 +788,9 @@ Public Class Form1
             If Not Captura Is Nothing Then
                 Captura.EventHandler = Me
                 Enroller = New DPFP.Processing.Enrollment()
+                Dim text As New StringBuilder()
+                text.AppendFormat("Necesitas pasar el dedo {0} veces", Enroller.FeaturesNeeded)
+                vecesDedo.Text = text.ToString()
             Else
                 MessageBox.Show("No se puede instanciar la captura")
             End If
@@ -812,6 +826,7 @@ Public Class Form1
 
     Public Sub OnComplete(Capture As Object, ReaderSerialNumber As String, Sample As Sample) Implements EventHandler.OnComplete
         ponerImagen(ConvertirSampleaMapadeBits(Sample))
+        Procesar(Sample)
     End Sub
 
     Public Sub OnFingerGone(Capture As Object, ReaderSerialNumber As String) Implements EventHandler.OnFingerGone
@@ -863,8 +878,18 @@ Public Class Form1
         If (Not caracteristicas Is Nothing) Then
             Try
                 Enroller.AddFeatures(caracteristicas)
-            Catch ex As Exception
-
+            Finally
+                Dim text As New StringBuilder()
+                text.AppendFormat("Necesitas pasar el dedo {0} veces", Enroller.FeaturesNeeded)
+                mostrarVeces(text.ToString())
+                Select Case Enroller.TemplateStatus
+                    Case DPFP.Processing.Enrollment.Status.Ready
+                        pararCaptura()
+                    Case DPFP.Processing.Enrollment.Status.Failed
+                        Enroller.Clear()
+                        pararCaptura()
+                        iniciarCaptura()
+                End Select
             End Try
         End If
     End Sub

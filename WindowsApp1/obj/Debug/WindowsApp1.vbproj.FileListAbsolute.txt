@@ -84,3 +84,8 @@ C:\Users\pikachu\Desktop\ProyectoFIMEE\WindowsApp1\WindowsApp1\bin\Debug\MySql.D
 C:\Users\pikachu\Desktop\ProyectoFIMEE\WindowsApp1\WindowsApp1\obj\Debug\WindowsApp1.vbproj.CopyComplete
 C:\Users\pikachu\Desktop\ProyectoFIMEE\WindowsApp1\WindowsApp1\bin\Debug\DPFPDevNET.dll
 C:\Users\pikachu\Desktop\ProyectoFIMEE\WindowsApp1\WindowsApp1\bin\Debug\DPFPShrNET.dll
+C:\Users\pikachu\Desktop\ProyectoFIMEE\WindowsApp1\WindowsApp1\bin\Debug\DPFPEngNET.dll
+C:\Users\pikachu\Desktop\ProyectoFIMEE\WindowsApp1\WindowsApp1\bin\Debug\DPFPGuiNET.dll
+C:\Users\pikachu\Desktop\ProyectoFIMEE\WindowsApp1\WindowsApp1\bin\Debug\DPFPVerNET.dll
+C:\Users\pikachu\Desktop\ProyectoFIMEE\WindowsApp1\WindowsApp1\bin\Debug\DPFPCtlXWrapperNET.dll
+C:\Users\pikachu\Desktop\ProyectoFIMEE\WindowsApp1\WindowsApp1\bin\Debug\DPFPCtlXTypeLibNET.dll
