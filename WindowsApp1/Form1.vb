@@ -772,6 +772,8 @@ Public Class Form1
     Private Captura As DPFP.Capture.Capture
     Private Enroller As DPFP.Processing.Enrollment
     Private Delegate Sub _delegadoMuestra(ByVal text As String)
+    'Private Delegate Sub _delegadoControles()
+    Private template As DPFP.Template
 
     Private Sub mostrarVeces(ByVal texto As String)
         If (vecesDedo.InvokeRequired) Then
@@ -884,6 +886,7 @@ Public Class Form1
                 mostrarVeces(text.ToString())
                 Select Case Enroller.TemplateStatus
                     Case DPFP.Processing.Enrollment.Status.Ready
+                        template = Enroller.Template
                         pararCaptura()
                     Case DPFP.Processing.Enrollment.Status.Failed
                         Enroller.Clear()
