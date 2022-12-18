@@ -2,17 +2,18 @@
 Imports DPFP
 Imports DPFP.Capture
 Imports System.Text
+Imports System.IO
 
 Public Class Form1
 
     Implements DPFP.Capture.EventHandler
 
     'server=localhost; user=yout_database_user; password=your_database_password; database=your_database_name
-    Dim Connection As New MySqlConnection("server=localhost; port=3306; user=root; password=root; database=fimeeproverfid")
+    Dim Connection As New MySqlConnection("server=localhost; port=3306; user=root; password=root; database=fimeeerfid")
     Dim MySQLCMD As New MySqlCommand
     Dim MySQLDA As New MySqlDataAdapter
     Dim DT As New DataTable
-    Dim Table_Name As String = "fimeeproveone" 'name the table
+    Dim Table_Name As String = "fimeeerfidone" 'name the table
     Dim Data As Integer
 
     Dim LoadImagesStr As Boolean = False
@@ -24,6 +25,12 @@ Public Class Form1
     Public Shared StrSerialIn As String
     Dim GetID As Boolean = False
     Dim ViewUserData As Boolean = False
+
+    Private Captura As DPFP.Capture.Capture
+    Private Enroller As DPFP.Processing.Enrollment
+    Private Delegate Sub _delegadoMuestra(ByVal text As String)
+    'Private Delegate Sub _delegadoControles()
+    Private template As DPFP.Template
 
 
 
@@ -348,7 +355,7 @@ Public Class Form1
             Try
                 MySQLCMD = New MySqlCommand
                 With MySQLCMD
-                    .CommandText = "INSERT INTO " & Table_Name & " (Nombre, ID, Apellidos, Carrera, Celular, Carnetid, Carnetu, Correo, Domicilio, Observaciones, Images) VALUES (@nombre, @ID, @apellidos, @carrera, @celular, @carnetid, @carnetu, @correo, @domicilio, @observaciones, @images)"
+                    .CommandText = "INSERT INTO " & Table_Name & " (Nombre, ID, Apellidos, Carrera, Celular, Carnetid, Carnetu, Correo, Domicilio, Observaciones, Images, huella) VALUES (@nombre, @ID, @apellidos, @carrera, @celular, @carnetid, @carnetu, @correo, @domicilio, @observaciones, @images, @huella)"
                     .Connection = Connection
                     .Parameters.AddWithValue("@nombre", TextBoxName.Text)
                     .Parameters.AddWithValue("@id", LabelGetID.Text)
@@ -361,6 +368,9 @@ Public Class Form1
                     .Parameters.AddWithValue("@domicilio", TextBoxCareer.Text)
                     .Parameters.AddWithValue("@observaciones", TextBoxObservations.Text)
                     .Parameters.AddWithValue("@images", arrImage)
+                    Using fm As New MemoryStream(template.Bytes)
+                        .Parameters.AddWithValue("@huella", fm.ToArray())
+                    End Using
                     .ExecuteNonQuery()
                 End With
                 MsgBox("Datos guardados exitosamente", MsgBoxStyle.Information, "Información")
@@ -389,7 +399,7 @@ Public Class Form1
                 Try
                     MySQLCMD = New MySqlCommand
                     With MySQLCMD
-                        .CommandText = "UPDATE " & Table_Name & " SET  Nombre=@nombre,ID=@id,Apellidos=@apellidos,Carrera=@carrera,Celular=@celular,Carnetid=@carnetid,Carnetu=@carnetu,Correo=@correo,Observaciones=@observaciones,Images=@images WHERE ID=@id "
+                        .CommandText = "UPDATE " & Table_Name & " SET  Nombre=@nombre,ID=@id,Apellidos=@apellidos,Carrera=@carrera,Celular=@celular,Carnetid=@carnetid,Carnetu=@carnetu,Correo=@correo,Observaciones=@observaciones,Images=@images, huella=@huella WHERE ID=@id "
                         .Connection = Connection
                         .Parameters.AddWithValue("@nombre", TextBoxName.Text)
                         .Parameters.AddWithValue("@id", LabelGetID.Text)
@@ -402,6 +412,9 @@ Public Class Form1
                         .Parameters.AddWithValue("@domicilio", TextBoxMail.Text)
                         .Parameters.AddWithValue("@observaciones", TextBoxObservations.Text)
                         .Parameters.AddWithValue("@images", arrImage)
+                        Using fm As New MemoryStream(template.Bytes)
+                            .Parameters.AddWithValue("@huella", fm.ToArray())
+                        End Using
                         .ExecuteNonQuery()
                     End With
                     MsgBox("Datos guardados satisfactoriamente", MsgBoxStyle.Information, "Información")
@@ -769,11 +782,7 @@ Public Class Form1
 
     'CODIGO DEL LECTOR DE HUELLAS
 
-    Private Captura As DPFP.Capture.Capture
-    Private Enroller As DPFP.Processing.Enrollment
-    Private Delegate Sub _delegadoMuestra(ByVal text As String)
-    'Private Delegate Sub _delegadoControles()
-    Private template As DPFP.Template
+
 
     Private Sub mostrarVeces(ByVal texto As String)
         If (vecesDedo.InvokeRequired) Then
