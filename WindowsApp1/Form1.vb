@@ -151,6 +151,11 @@ Public Class Form1
         TextBoxAddress.Text = ""
         TextBoxObservations.Text = ""
         PictureBoxImageInput.Image = My.Resources.userimage2
+        imagenHuella.Image = My.Resources.huella_2
+        Enroller.Clear()
+        pararCaptura()
+        iniciarCaptura()
+        vecesDedo.ResetText()
     End Sub
 
     Private Sub ButtonConnection_Click(sender As Object, e As EventArgs) Handles ButtonConnection.Click
