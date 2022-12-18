@@ -68,6 +68,7 @@ Partial Class Form1
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PanelRegistrationandEditUserData = New System.Windows.Forms.Panel()
+        Me.vecesDedo = New System.Windows.Forms.Label()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.imagenHuella = New System.Windows.Forms.PictureBox()
         Me.TextBoxObservations = New System.Windows.Forms.TextBox()
@@ -125,7 +126,6 @@ Partial Class Form1
         Me.ButtonRegistration = New System.Windows.Forms.Button()
         Me.ButtonUserData = New System.Windows.Forms.Button()
         Me.ButtonConnection = New System.Windows.Forms.Button()
-        Me.vecesDedo = New System.Windows.Forms.Label()
         Me.PanelConnection.SuspendLayout()
         Me.PanelUserData.SuspendLayout()
         Me.GroupBoxImage.SuspendLayout()
@@ -640,6 +640,15 @@ Partial Class Form1
         Me.PanelRegistrationandEditUserData.Name = "PanelRegistrationandEditUserData"
         Me.PanelRegistrationandEditUserData.Size = New System.Drawing.Size(588, 546)
         Me.PanelRegistrationandEditUserData.TabIndex = 6
+        '
+        'vecesDedo
+        '
+        Me.vecesDedo.AutoSize = True
+        Me.vecesDedo.Location = New System.Drawing.Point(287, 198)
+        Me.vecesDedo.Name = "vecesDedo"
+        Me.vecesDedo.Size = New System.Drawing.Size(121, 13)
+        Me.vecesDedo.TabIndex = 29
+        Me.vecesDedo.Text = "Necesitas pasar el dedo"
         '
         'GroupBox5
         '
@@ -1223,15 +1232,6 @@ Partial Class Form1
         Me.ButtonConnection.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ButtonConnection.UseVisualStyleBackColor = True
         '
-        'vecesDedo
-        '
-        Me.vecesDedo.AutoSize = True
-        Me.vecesDedo.Location = New System.Drawing.Point(287, 198)
-        Me.vecesDedo.Name = "vecesDedo"
-        Me.vecesDedo.Size = New System.Drawing.Size(121, 13)
-        Me.vecesDedo.TabIndex = 29
-        Me.vecesDedo.Text = "Necesitas pasar el dedo"
-        '
         'Form1
         '
         Me.AccessibleRole = System.Windows.Forms.AccessibleRole.Clock
@@ -1243,9 +1243,9 @@ Partial Class Form1
         Me.Controls.Add(Me.PictureBoxStatusConnect)
         Me.Controls.Add(Me.LabelConectionStatus)
         Me.Controls.Add(Me.PanelMenu)
+        Me.Controls.Add(Me.PanelUserData)
         Me.Controls.Add(Me.PanelRegistrationandEditUserData)
         Me.Controls.Add(Me.PanelConnection)
-        Me.Controls.Add(Me.PanelUserData)
         Me.Name = "Form1"
         Me.Text = "RFID Arduino User by Uteh Str"
         Me.PanelConnection.ResumeLayout(False)

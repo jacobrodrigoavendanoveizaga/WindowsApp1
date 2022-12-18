@@ -124,7 +124,7 @@ Public Class Form1
                 LabelCi.Text = DT.Rows(0).Item("CarnetId")
                 LabelCu.Text = DT.Rows(0).Item("CarnetU")
                 LabelMail.Text = DT.Rows(0).Item("Correo")
-                LabelSurname.Text = DT.Rows(0).Item("Domicilio")
+                LabelAddress.Text = DT.Rows(0).Item("Domicilio")
                 LabelObservations.Text = DT.Rows(0).Item("Observaciones")
             Else
                 MsgBox("ID no encontrado !!!" & vbCr & "Por favor, registre su identificación.", MsgBoxStyle.Information, "Mensaje de Información")
@@ -148,7 +148,7 @@ Public Class Form1
         TextBoxCi.Text = ""
         TextBoxCu.Text = ""
         TextBoxMail.Text = ""
-        TextBoxCareer.Text = ""
+        TextBoxAddress.Text = ""
         TextBoxObservations.Text = ""
         PictureBoxImageInput.Image = My.Resources.userimage2
     End Sub
@@ -274,7 +274,7 @@ Public Class Form1
         LabelCi.Text = "- - - - - - - - - - "
         LabelCu.Text = "- - - - - - - - - - "
         LabelMail.Text = "- - - - - - - - - - "
-        LabelSurname.Text = "- - - - - - - - - - "
+        LabelAddress.Text = "- - - - - - - - - - "
         LabelObservations.Text = "- - - - - - - - - - "
         PictureBoxUserImage.Image = Nothing
     End Sub
@@ -365,7 +365,7 @@ Public Class Form1
                     .Parameters.AddWithValue("@carnetid", TextBoxCi.Text)
                     .Parameters.AddWithValue("@carnetu", TextBoxCu.Text)
                     .Parameters.AddWithValue("@correo", TextBoxMail.Text)
-                    .Parameters.AddWithValue("@domicilio", TextBoxCareer.Text)
+                    .Parameters.AddWithValue("@domicilio", TextBoxAddress.Text)
                     .Parameters.AddWithValue("@observaciones", TextBoxObservations.Text)
                     .Parameters.AddWithValue("@images", arrImage)
                     Using fm As New MemoryStream(template.Bytes)
@@ -409,7 +409,7 @@ Public Class Form1
                         .Parameters.AddWithValue("@carnetid", TextBoxCi.Text)
                         .Parameters.AddWithValue("@carnetu", TextBoxCu.Text)
                         .Parameters.AddWithValue("@correo", TextBoxMail.Text)
-                        .Parameters.AddWithValue("@domicilio", TextBoxMail.Text)
+                        .Parameters.AddWithValue("@domicilio", TextBoxAddress.Text)
                         .Parameters.AddWithValue("@observaciones", TextBoxObservations.Text)
                         .Parameters.AddWithValue("@images", arrImage)
                         Using fm As New MemoryStream(template.Bytes)
@@ -450,7 +450,7 @@ Public Class Form1
                         .Parameters.AddWithValue("@carnetid", TextBoxCi.Text)
                         .Parameters.AddWithValue("@carnetu", TextBoxCu.Text)
                         .Parameters.AddWithValue("@correo", TextBoxMail.Text)
-                        .Parameters.AddWithValue("@domicilio", TextBoxCareer.Text)
+                        .Parameters.AddWithValue("@domicilio", TextBoxAddress.Text)
                         .Parameters.AddWithValue("@observaciones", TextBoxObservations.Text)
                         .ExecuteNonQuery()
                     End With
@@ -743,7 +743,7 @@ Public Class Form1
                     TextBoxCi.Text = DT.Rows(0).Item("CarnetId")
                     TextBoxCu.Text = DT.Rows(0).Item("CarnetU")
                     TextBoxMail.Text = DT.Rows(0).Item("Correo")
-                    TextBoxCareer.Text = DT.Rows(0).Item("Domicilio")
+                    TextBoxAddress.Text = DT.Rows(0).Item("Domicilio")
                     TextBoxObservations.Text = DT.Rows(0).Item("Observaciones")
                     StatusInput = "Update"
                 End If
