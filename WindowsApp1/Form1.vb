@@ -553,23 +553,23 @@ Public Class Form1
     Private Sub TextBoxSearch_TextChanged(sender As Object, e As EventArgs) Handles TextBoxSearch.TextChanged
         If CheckBoxByID.Checked = True Then
             If TextBoxSearch.Text = Nothing Then
-                SqlCmdSearchstr = "SELECT Nombre, ID, Apellidos, Carrera, Celular, Carnetid, Carnetu, Correo, Domicilio, Observaciones " & Table_Name & " ORDER BY Name"
+                SqlCmdSearchstr = "SELECT Nombre, ID, Apellidos, Carrera, Celular, Carnetid, Carnetu, Correo, Domicilio, Observaciones FROM " & Table_Name & " ORDER BY Name"
             Else
-                SqlCmdSearchstr = "SELECT Nombre, ID, Apellidos, Carrera, Celular, Carnetid, Carnetu, Correo, Domicilio, Observaciones  " & Table_Name & " WHERE ID LIKE'" & TextBoxSearch.Text & "%'"
+                SqlCmdSearchstr = "SELECT Nombre, ID, Apellidos, Carrera, Celular, Carnetid, Carnetu, Correo, Domicilio, Observaciones FROM " & Table_Name & " WHERE ID LIKE'" & TextBoxSearch.Text & "%'"
             End If
         End If
         If CheckBoxByName.Checked = True Then
             If TextBoxSearch.Text = Nothing Then
                 SqlCmdSearchstr = "SELECT Nombre, ID, Apellidos, Carrera, Celular, Carnetid, Carnetu, Correo, Domicilio, Observaciones FROM " & Table_Name & " ORDER BY Name"
             Else
-                SqlCmdSearchstr = "SELECT Nombre, ID, Apellidos, Carrera, Celular, Carnetid, Carnetu, Correo, Domicilio, Observaciones FROM " & Table_Name & " WHERE Name LIKE'" & TextBoxSearch.Text & "%'"
+                SqlCmdSearchstr = "SELECT Nombre, ID, Apellidos, Carrera, Celular, Carnetid, Carnetu, Correo, Domicilio, Observaciones FROM " & Table_Name & " WHERE Nombre LIKE'" & TextBoxSearch.Text & "%'"
             End If
         End If
 
         Try
             Connection.Open()
         Catch ex As Exception
-            MessageBox.Show("Error de conexión!!!" & vbCrLf & "Compruebe que el servidor está listo !!!", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            ' MessageBox.Show("Error de conexión!!!" & vbCrLf & "Compruebe que el servidor está listo !!!", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return
         End Try
 
@@ -586,7 +586,7 @@ Public Class Form1
                 DataGridView1.DataSource = DT
             End If
         Catch ex As Exception
-            MsgBox("Error al buscar" & vbCr & ex.Message, MsgBoxStyle.Critical, "Mensaje de Error")
+            'MsgBox("Error al buscar" & vbCr & ex.Message, MsgBoxStyle.Critical, "Mensaje de Error")
             Connection.Close()
         End Try
         Connection.Close()
