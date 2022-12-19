@@ -569,7 +569,7 @@ Public Class Form1
         Try
             Connection.Open()
         Catch ex As Exception
-            MessageBox.Show("Error de conexiónError de conexión !!!" & vbCrLf & "Compruebe que el servidor está listo !!!", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Error de conexión!!!" & vbCrLf & "Compruebe que el servidor está listo !!!", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return
         End Try
 
@@ -910,6 +910,7 @@ Public Class Form1
             End Try
         End If
     End Sub
+
 
     'Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBoxCu.TextChanged
 
