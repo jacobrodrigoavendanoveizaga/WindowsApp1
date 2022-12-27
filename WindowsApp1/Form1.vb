@@ -40,6 +40,7 @@ Public Class Form1
         Me.CenterToScreen()
         PanelConnection.Visible = True
         PanelUserData.Visible = False
+        PanelFingerPrint.Visible = False
         PanelRegistrationandEditUserData.Visible = False
         ComboBoxBaudRate.SelectedIndex = 3
 
@@ -161,6 +162,7 @@ Public Class Form1
     Private Sub ButtonConnection_Click(sender As Object, e As EventArgs) Handles ButtonConnection.Click
         PictureBoxSelect.Top = ButtonConnection.Top
         PanelUserData.Visible = False
+        PanelFingerPrint.Visible = False
         PanelRegistrationandEditUserData.Visible = False
         PanelConnection.Visible = True
     End Sub
@@ -175,8 +177,16 @@ Public Class Form1
             PictureBoxSelect.Top = ButtonUserData.Top
             PanelRegistrationandEditUserData.Visible = False
             PanelConnection.Visible = False
+            PanelFingerPrint.Visible = False
             PanelUserData.Visible = True
         End If
+    End Sub
+
+    Private Sub ButtonFingerPrint_Click(Sender As Object, e As EventArgs) Handles ButtonFingerPrint.Click
+        PanelRegistrationandEditUserData.Visible = False
+        PanelConnection.Visible = False
+        PanelUserData.Visible = False
+        PanelFingerPrint.Visible = True
     End Sub
 
     Private Sub ButtonRegistration_Click(sender As Object, e As EventArgs) Handles ButtonRegistration.Click
@@ -184,6 +194,7 @@ Public Class Form1
         ViewUserData = False
         PictureBoxSelect.Top = ButtonRegistration.Top
         PanelConnection.Visible = False
+        PanelFingerPrint.Visible = False
         PanelUserData.Visible = False
         PanelRegistrationandEditUserData.Visible = True
         ShowData()

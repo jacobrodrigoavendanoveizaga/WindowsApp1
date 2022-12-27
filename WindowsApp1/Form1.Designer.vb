@@ -23,9 +23,9 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.LabelConectionStatus = New System.Windows.Forms.Label()
         Me.LabelDataTime = New System.Windows.Forms.Label()
         Me.PanelConnection = New System.Windows.Forms.Panel()
@@ -90,11 +90,6 @@ Partial Class Form1
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.PictureBoxImagePreview = New System.Windows.Forms.PictureBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SelectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ClearSelectionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RefreshToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CheckBoxByID = New System.Windows.Forms.CheckBox()
         Me.CheckBoxByName = New System.Windows.Forms.CheckBox()
         Me.TextBoxSearch = New System.Windows.Forms.TextBox()
@@ -116,6 +111,11 @@ Partial Class Form1
         Me.TextBoxName = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SelectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClearSelectionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RefreshToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TimerTimeData = New System.Windows.Forms.Timer(Me.components)
         Me.TimerSerialIn = New System.Windows.Forms.Timer(Me.components)
         Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
@@ -123,11 +123,46 @@ Partial Class Form1
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.PictureBoxStatusConnect = New System.Windows.Forms.PictureBox()
         Me.PanelMenu = New System.Windows.Forms.Panel()
+        Me.ButtonFingerPrint = New System.Windows.Forms.Button()
         Me.PictureBoxLogo = New System.Windows.Forms.PictureBox()
         Me.PictureBoxSelect = New System.Windows.Forms.PictureBox()
         Me.ButtonRegistration = New System.Windows.Forms.Button()
         Me.ButtonUserData = New System.Windows.Forms.Button()
         Me.ButtonConnection = New System.Windows.Forms.Button()
+        Me.PanelFingerPrint = New System.Windows.Forms.Panel()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.Label42 = New System.Windows.Forms.Label()
+        Me.Label43 = New System.Windows.Forms.Label()
+        Me.Label44 = New System.Windows.Forms.Label()
+        Me.Label45 = New System.Windows.Forms.Label()
+        Me.Label46 = New System.Windows.Forms.Label()
+        Me.Label47 = New System.Windows.Forms.Label()
+        Me.Label48 = New System.Windows.Forms.Label()
+        Me.Label49 = New System.Windows.Forms.Label()
+        Me.Label50 = New System.Windows.Forms.Label()
+        Me.Label51 = New System.Windows.Forms.Label()
+        Me.Label52 = New System.Windows.Forms.Label()
+        Me.Label53 = New System.Windows.Forms.Label()
+        Me.Label54 = New System.Windows.Forms.Label()
+        Me.Label55 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label56 = New System.Windows.Forms.Label()
+        Me.Label57 = New System.Windows.Forms.Label()
+        Me.Label58 = New System.Windows.Forms.Label()
         Me.PanelConnection.SuspendLayout()
         Me.PanelUserData.SuspendLayout()
         Me.GroupBoxImage.SuspendLayout()
@@ -141,14 +176,18 @@ Partial Class Form1
         Me.GroupBox4.SuspendLayout()
         CType(Me.PictureBoxImagePreview, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ContextMenuStrip1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.PictureBoxImageInput, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        Me.ContextMenuStrip1.SuspendLayout()
         CType(Me.PictureBoxStatusConnect, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelMenu.SuspendLayout()
         CType(Me.PictureBoxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxSelect, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelFingerPrint.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox7.SuspendLayout()
         Me.SuspendLayout()
         '
         'LabelConectionStatus
@@ -344,7 +383,7 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Location = New System.Drawing.Point(14, 271)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(585, 263)
+        Me.GroupBox1.Size = New System.Drawing.Size(558, 263)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Detalled Data"
@@ -575,7 +614,7 @@ Partial Class Form1
         Me.ButtonClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonClear.Font = New System.Drawing.Font("Arial Rounded MT Bold", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonClear.ForeColor = System.Drawing.Color.Black
-        Me.ButtonClear.Location = New System.Drawing.Point(497, 226)
+        Me.ButtonClear.Location = New System.Drawing.Point(470, 226)
         Me.ButtonClear.Name = "ButtonClear"
         Me.ButtonClear.Size = New System.Drawing.Size(68, 21)
         Me.ButtonClear.TabIndex = 6
@@ -854,67 +893,37 @@ Partial Class Form1
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.LightSteelBlue
         Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.LightSlateGray
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.LightSlateGray
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.LightSlateGray
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSlateGray
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.EnableHeadersVisualStyles = False
         Me.DataGridView1.Location = New System.Drawing.Point(6, 44)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.LightSlateGray
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SlateGray
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.LightSlateGray
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SlateGray
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.LightSteelBlue
-        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.LightSlateGray
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.LightSteelBlue
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightSlateGray
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(450, 145)
         Me.DataGridView1.TabIndex = 21
-        '
-        'ContextMenuStrip1
-        '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DeleteToolStripMenuItem, Me.SelectAllToolStripMenuItem, Me.ClearSelectionToolStripMenuItem, Me.RefreshToolStripMenuItem})
-        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(153, 92)
-        '
-        'DeleteToolStripMenuItem
-        '
-        Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.DeleteToolStripMenuItem.Text = "Delete"
-        '
-        'SelectAllToolStripMenuItem
-        '
-        Me.SelectAllToolStripMenuItem.Name = "SelectAllToolStripMenuItem"
-        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.SelectAllToolStripMenuItem.Text = "Select All"
-        '
-        'ClearSelectionToolStripMenuItem
-        '
-        Me.ClearSelectionToolStripMenuItem.Name = "ClearSelectionToolStripMenuItem"
-        Me.ClearSelectionToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.ClearSelectionToolStripMenuItem.Text = "Clear Selection"
-        '
-        'RefreshToolStripMenuItem
-        '
-        Me.RefreshToolStripMenuItem.Name = "RefreshToolStripMenuItem"
-        Me.RefreshToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.RefreshToolStripMenuItem.Text = "Refresh"
         '
         'CheckBoxByID
         '
@@ -1144,6 +1153,36 @@ Partial Class Form1
         Me.Panel3.Size = New System.Drawing.Size(618, 5)
         Me.Panel3.TabIndex = 0
         '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DeleteToolStripMenuItem, Me.SelectAllToolStripMenuItem, Me.ClearSelectionToolStripMenuItem, Me.RefreshToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(153, 92)
+        '
+        'DeleteToolStripMenuItem
+        '
+        Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DeleteToolStripMenuItem.Text = "Delete"
+        '
+        'SelectAllToolStripMenuItem
+        '
+        Me.SelectAllToolStripMenuItem.Name = "SelectAllToolStripMenuItem"
+        Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SelectAllToolStripMenuItem.Text = "Select All"
+        '
+        'ClearSelectionToolStripMenuItem
+        '
+        Me.ClearSelectionToolStripMenuItem.Name = "ClearSelectionToolStripMenuItem"
+        Me.ClearSelectionToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ClearSelectionToolStripMenuItem.Text = "Clear Selection"
+        '
+        'RefreshToolStripMenuItem
+        '
+        Me.RefreshToolStripMenuItem.Name = "RefreshToolStripMenuItem"
+        Me.RefreshToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RefreshToolStripMenuItem.Text = "Refresh"
+        '
         'TimerTimeData
         '
         Me.TimerTimeData.Enabled = True
@@ -1174,6 +1213,7 @@ Partial Class Form1
         Me.PanelMenu.BackColor = System.Drawing.Color.Transparent
         Me.PanelMenu.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.lineas_borrosas_coloridas_1220x2160_xtrafondos_com
         Me.PanelMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelMenu.Controls.Add(Me.ButtonFingerPrint)
         Me.PanelMenu.Controls.Add(Me.PictureBoxLogo)
         Me.PanelMenu.Controls.Add(Me.PictureBoxSelect)
         Me.PanelMenu.Controls.Add(Me.ButtonRegistration)
@@ -1183,6 +1223,22 @@ Partial Class Form1
         Me.PanelMenu.Name = "PanelMenu"
         Me.PanelMenu.Size = New System.Drawing.Size(324, 579)
         Me.PanelMenu.TabIndex = 0
+        '
+        'ButtonFingerPrint
+        '
+        Me.ButtonFingerPrint.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
+        Me.ButtonFingerPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray
+        Me.ButtonFingerPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
+        Me.ButtonFingerPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonFingerPrint.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonFingerPrint.ForeColor = System.Drawing.Color.Black
+        Me.ButtonFingerPrint.Location = New System.Drawing.Point(56, 440)
+        Me.ButtonFingerPrint.Name = "ButtonFingerPrint"
+        Me.ButtonFingerPrint.Size = New System.Drawing.Size(206, 36)
+        Me.ButtonFingerPrint.TabIndex = 6
+        Me.ButtonFingerPrint.Text = "Base de datos Huella"
+        Me.ButtonFingerPrint.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ButtonFingerPrint.UseVisualStyleBackColor = True
         '
         'PictureBoxLogo
         '
@@ -1197,7 +1253,7 @@ Partial Class Form1
         'PictureBoxSelect
         '
         Me.PictureBoxSelect.Image = Global.WindowsApp1.My.Resources.Resources.pngegg
-        Me.PictureBoxSelect.Location = New System.Drawing.Point(21, 304)
+        Me.PictureBoxSelect.Location = New System.Drawing.Point(21, 300)
         Me.PictureBoxSelect.Name = "PictureBoxSelect"
         Me.PictureBoxSelect.Size = New System.Drawing.Size(20, 36)
         Me.PictureBoxSelect.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -1212,7 +1268,7 @@ Partial Class Form1
         Me.ButtonRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonRegistration.Font = New System.Drawing.Font("Times New Roman", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonRegistration.ForeColor = System.Drawing.Color.Black
-        Me.ButtonRegistration.Location = New System.Drawing.Point(56, 451)
+        Me.ButtonRegistration.Location = New System.Drawing.Point(56, 508)
         Me.ButtonRegistration.Name = "ButtonRegistration"
         Me.ButtonRegistration.Size = New System.Drawing.Size(206, 36)
         Me.ButtonRegistration.TabIndex = 4
@@ -1232,7 +1288,7 @@ Partial Class Form1
         Me.ButtonUserData.Name = "ButtonUserData"
         Me.ButtonUserData.Size = New System.Drawing.Size(206, 36)
         Me.ButtonUserData.TabIndex = 3
-        Me.ButtonUserData.Text = "Base de datos"
+        Me.ButtonUserData.Text = "Base de datos RFID"
         Me.ButtonUserData.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ButtonUserData.UseVisualStyleBackColor = True
         '
@@ -1252,6 +1308,355 @@ Partial Class Form1
         Me.ButtonConnection.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ButtonConnection.UseVisualStyleBackColor = True
         '
+        'PanelFingerPrint
+        '
+        Me.PanelFingerPrint.Controls.Add(Me.GroupBox6)
+        Me.PanelFingerPrint.Controls.Add(Me.Panel4)
+        Me.PanelFingerPrint.Controls.Add(Me.GroupBox7)
+        Me.PanelFingerPrint.Location = New System.Drawing.Point(332, 20)
+        Me.PanelFingerPrint.Name = "PanelFingerPrint"
+        Me.PanelFingerPrint.Size = New System.Drawing.Size(588, 546)
+        Me.PanelFingerPrint.TabIndex = 7
+        '
+        'GroupBox6
+        '
+        Me.GroupBox6.Controls.Add(Me.Label11)
+        Me.GroupBox6.Controls.Add(Me.PictureBox1)
+        Me.GroupBox6.Location = New System.Drawing.Point(78, 23)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Size = New System.Drawing.Size(208, 239)
+        Me.GroupBox6.TabIndex = 1
+        Me.GroupBox6.TabStop = False
+        Me.GroupBox6.Text = "Imagen y ID"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(17, 213)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(84, 13)
+        Me.Label11.TabIndex = 2
+        Me.Label11.Text = "ID: __________"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox1.Location = New System.Drawing.Point(20, 36)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(174, 174)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
+        'Panel4
+        '
+        Me.Panel4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel4.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.Panel4.Location = New System.Drawing.Point(3, 0)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(1063, 5)
+        Me.Panel4.TabIndex = 0
+        '
+        'GroupBox7
+        '
+        Me.GroupBox7.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox7.Controls.Add(Me.Label22)
+        Me.GroupBox7.Controls.Add(Me.Label25)
+        Me.GroupBox7.Controls.Add(Me.Label28)
+        Me.GroupBox7.Controls.Add(Me.Label31)
+        Me.GroupBox7.Controls.Add(Me.Label35)
+        Me.GroupBox7.Controls.Add(Me.Label37)
+        Me.GroupBox7.Controls.Add(Me.Label38)
+        Me.GroupBox7.Controls.Add(Me.Label39)
+        Me.GroupBox7.Controls.Add(Me.Label40)
+        Me.GroupBox7.Controls.Add(Me.Label41)
+        Me.GroupBox7.Controls.Add(Me.Label42)
+        Me.GroupBox7.Controls.Add(Me.Label43)
+        Me.GroupBox7.Controls.Add(Me.Label44)
+        Me.GroupBox7.Controls.Add(Me.Label45)
+        Me.GroupBox7.Controls.Add(Me.Label46)
+        Me.GroupBox7.Controls.Add(Me.Label47)
+        Me.GroupBox7.Controls.Add(Me.Label48)
+        Me.GroupBox7.Controls.Add(Me.Label49)
+        Me.GroupBox7.Controls.Add(Me.Label50)
+        Me.GroupBox7.Controls.Add(Me.Label51)
+        Me.GroupBox7.Controls.Add(Me.Label52)
+        Me.GroupBox7.Controls.Add(Me.Label53)
+        Me.GroupBox7.Controls.Add(Me.Label54)
+        Me.GroupBox7.Controls.Add(Me.Label55)
+        Me.GroupBox7.Controls.Add(Me.Button1)
+        Me.GroupBox7.Controls.Add(Me.Label56)
+        Me.GroupBox7.Controls.Add(Me.Label57)
+        Me.GroupBox7.Controls.Add(Me.Label58)
+        Me.GroupBox7.Location = New System.Drawing.Point(14, 271)
+        Me.GroupBox7.Name = "GroupBox7"
+        Me.GroupBox7.Size = New System.Drawing.Size(558, 263)
+        Me.GroupBox7.TabIndex = 2
+        Me.GroupBox7.TabStop = False
+        Me.GroupBox7.Text = "Datos Detallados"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(151, 192)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(61, 13)
+        Me.Label22.TabIndex = 30
+        Me.Label22.Text = "- - - - - - - - - "
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(128, 192)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(10, 13)
+        Me.Label25.TabIndex = 29
+        Me.Label25.Text = ":"
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Location = New System.Drawing.Point(33, 192)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(78, 13)
+        Me.Label28.TabIndex = 28
+        Me.Label28.Text = "Observaciones"
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Location = New System.Drawing.Point(151, 152)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(61, 13)
+        Me.Label31.TabIndex = 27
+        Me.Label31.Text = "- - - - - - - - - "
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.Location = New System.Drawing.Point(128, 152)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(10, 13)
+        Me.Label35.TabIndex = 26
+        Me.Label35.Text = ":"
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Location = New System.Drawing.Point(33, 152)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(93, 13)
+        Me.Label37.TabIndex = 25
+        Me.Label37.Text = "Correo electrónico"
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.Location = New System.Drawing.Point(151, 132)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(61, 13)
+        Me.Label38.TabIndex = 24
+        Me.Label38.Text = "- - - - - - - - - "
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.Location = New System.Drawing.Point(128, 132)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(10, 13)
+        Me.Label39.TabIndex = 23
+        Me.Label39.Text = ":"
+        '
+        'Label40
+        '
+        Me.Label40.AutoSize = True
+        Me.Label40.Location = New System.Drawing.Point(33, 132)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(49, 13)
+        Me.Label40.TabIndex = 22
+        Me.Label40.Text = "Carnet U"
+        '
+        'Label41
+        '
+        Me.Label41.AutoSize = True
+        Me.Label41.Location = New System.Drawing.Point(151, 172)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(61, 13)
+        Me.Label41.TabIndex = 21
+        Me.Label41.Text = "- - - - - - - - - "
+        '
+        'Label42
+        '
+        Me.Label42.AutoSize = True
+        Me.Label42.Location = New System.Drawing.Point(128, 172)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(10, 13)
+        Me.Label42.TabIndex = 20
+        Me.Label42.Text = ":"
+        '
+        'Label43
+        '
+        Me.Label43.AutoSize = True
+        Me.Label43.Location = New System.Drawing.Point(33, 172)
+        Me.Label43.Name = "Label43"
+        Me.Label43.Size = New System.Drawing.Size(49, 13)
+        Me.Label43.TabIndex = 19
+        Me.Label43.Text = "Domicilio"
+        '
+        'Label44
+        '
+        Me.Label44.AutoSize = True
+        Me.Label44.Location = New System.Drawing.Point(151, 112)
+        Me.Label44.Name = "Label44"
+        Me.Label44.Size = New System.Drawing.Size(61, 13)
+        Me.Label44.TabIndex = 18
+        Me.Label44.Text = "- - - - - - - - - "
+        '
+        'Label45
+        '
+        Me.Label45.AutoSize = True
+        Me.Label45.Location = New System.Drawing.Point(128, 112)
+        Me.Label45.Name = "Label45"
+        Me.Label45.Size = New System.Drawing.Size(10, 13)
+        Me.Label45.TabIndex = 17
+        Me.Label45.Text = ":"
+        '
+        'Label46
+        '
+        Me.Label46.AutoSize = True
+        Me.Label46.Location = New System.Drawing.Point(34, 112)
+        Me.Label46.Name = "Label46"
+        Me.Label46.Size = New System.Drawing.Size(50, 13)
+        Me.Label46.TabIndex = 16
+        Me.Label46.Text = "Carnet Id"
+        '
+        'Label47
+        '
+        Me.Label47.AutoSize = True
+        Me.Label47.Location = New System.Drawing.Point(151, 72)
+        Me.Label47.Name = "Label47"
+        Me.Label47.Size = New System.Drawing.Size(61, 13)
+        Me.Label47.TabIndex = 15
+        Me.Label47.Text = "- - - - - - - - - "
+        '
+        'Label48
+        '
+        Me.Label48.AutoSize = True
+        Me.Label48.Location = New System.Drawing.Point(128, 72)
+        Me.Label48.Name = "Label48"
+        Me.Label48.Size = New System.Drawing.Size(10, 13)
+        Me.Label48.TabIndex = 14
+        Me.Label48.Text = ":"
+        '
+        'Label49
+        '
+        Me.Label49.AutoSize = True
+        Me.Label49.Location = New System.Drawing.Point(34, 72)
+        Me.Label49.Name = "Label49"
+        Me.Label49.Size = New System.Drawing.Size(41, 13)
+        Me.Label49.TabIndex = 13
+        Me.Label49.Text = "Carrera"
+        '
+        'Label50
+        '
+        Me.Label50.AutoSize = True
+        Me.Label50.Location = New System.Drawing.Point(151, 52)
+        Me.Label50.Name = "Label50"
+        Me.Label50.Size = New System.Drawing.Size(61, 13)
+        Me.Label50.TabIndex = 12
+        Me.Label50.Text = "- - - - - - - - - "
+        '
+        'Label51
+        '
+        Me.Label51.AutoSize = True
+        Me.Label51.Location = New System.Drawing.Point(128, 52)
+        Me.Label51.Name = "Label51"
+        Me.Label51.Size = New System.Drawing.Size(10, 13)
+        Me.Label51.TabIndex = 11
+        Me.Label51.Text = ":"
+        '
+        'Label52
+        '
+        Me.Label52.AutoSize = True
+        Me.Label52.Location = New System.Drawing.Point(34, 52)
+        Me.Label52.Name = "Label52"
+        Me.Label52.Size = New System.Drawing.Size(49, 13)
+        Me.Label52.TabIndex = 10
+        Me.Label52.Text = "Apellidos"
+        '
+        'Label53
+        '
+        Me.Label53.AutoSize = True
+        Me.Label53.Location = New System.Drawing.Point(151, 92)
+        Me.Label53.Name = "Label53"
+        Me.Label53.Size = New System.Drawing.Size(61, 13)
+        Me.Label53.TabIndex = 9
+        Me.Label53.Text = "- - - - - - - - - "
+        '
+        'Label54
+        '
+        Me.Label54.AutoSize = True
+        Me.Label54.Location = New System.Drawing.Point(128, 92)
+        Me.Label54.Name = "Label54"
+        Me.Label54.Size = New System.Drawing.Size(10, 13)
+        Me.Label54.TabIndex = 8
+        Me.Label54.Text = ":"
+        '
+        'Label55
+        '
+        Me.Label55.AutoSize = True
+        Me.Label55.Location = New System.Drawing.Point(34, 92)
+        Me.Label55.Name = "Label55"
+        Me.Label55.Size = New System.Drawing.Size(68, 13)
+        Me.Label55.TabIndex = 7
+        Me.Label55.Text = "Nº de celular"
+        '
+        'Button1
+        '
+        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.Black
+        Me.Button1.Location = New System.Drawing.Point(470, 226)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(68, 21)
+        Me.Button1.TabIndex = 6
+        Me.Button1.Text = "Clear"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Label56
+        '
+        Me.Label56.AutoSize = True
+        Me.Label56.Location = New System.Drawing.Point(151, 32)
+        Me.Label56.Name = "Label56"
+        Me.Label56.Size = New System.Drawing.Size(61, 13)
+        Me.Label56.TabIndex = 5
+        Me.Label56.Text = "- - - - - - - - - "
+        '
+        'Label57
+        '
+        Me.Label57.AutoSize = True
+        Me.Label57.Location = New System.Drawing.Point(128, 32)
+        Me.Label57.Name = "Label57"
+        Me.Label57.Size = New System.Drawing.Size(10, 13)
+        Me.Label57.TabIndex = 4
+        Me.Label57.Text = ":"
+        '
+        'Label58
+        '
+        Me.Label58.AutoSize = True
+        Me.Label58.Location = New System.Drawing.Point(34, 32)
+        Me.Label58.Name = "Label58"
+        Me.Label58.Size = New System.Drawing.Size(55, 13)
+        Me.Label58.TabIndex = 3
+        Me.Label58.Text = "Nombre(s)"
+        '
         'Form1
         '
         Me.AccessibleRole = System.Windows.Forms.AccessibleRole.Clock
@@ -1263,6 +1668,7 @@ Partial Class Form1
         Me.Controls.Add(Me.PictureBoxStatusConnect)
         Me.Controls.Add(Me.LabelConectionStatus)
         Me.Controls.Add(Me.PanelMenu)
+        Me.Controls.Add(Me.PanelFingerPrint)
         Me.Controls.Add(Me.PanelUserData)
         Me.Controls.Add(Me.PanelRegistrationandEditUserData)
         Me.Controls.Add(Me.PanelConnection)
@@ -1287,15 +1693,21 @@ Partial Class Form1
         Me.GroupBox4.PerformLayout()
         CType(Me.PictureBoxImagePreview, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
         CType(Me.PictureBoxImageInput, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.ContextMenuStrip1.ResumeLayout(False)
         CType(Me.PictureBoxStatusConnect, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelMenu.ResumeLayout(False)
         CType(Me.PictureBoxLogo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxSelect, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelFingerPrint.ResumeLayout(False)
+        Me.GroupBox6.ResumeLayout(False)
+        Me.GroupBox6.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox7.ResumeLayout(False)
+        Me.GroupBox7.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1403,4 +1815,39 @@ Partial Class Form1
     Friend WithEvents GroupBox5 As GroupBox
     Friend WithEvents imagenHuella As PictureBox
     Friend WithEvents vecesDedo As Label
+    Friend WithEvents ButtonFingerPrint As Button
+    Friend WithEvents PanelFingerPrint As Panel
+    Friend WithEvents GroupBox6 As GroupBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents GroupBox7 As GroupBox
+    Friend WithEvents Label22 As Label
+    Friend WithEvents Label25 As Label
+    Friend WithEvents Label28 As Label
+    Friend WithEvents Label31 As Label
+    Friend WithEvents Label35 As Label
+    Friend WithEvents Label37 As Label
+    Friend WithEvents Label38 As Label
+    Friend WithEvents Label39 As Label
+    Friend WithEvents Label40 As Label
+    Friend WithEvents Label41 As Label
+    Friend WithEvents Label42 As Label
+    Friend WithEvents Label43 As Label
+    Friend WithEvents Label44 As Label
+    Friend WithEvents Label45 As Label
+    Friend WithEvents Label46 As Label
+    Friend WithEvents Label47 As Label
+    Friend WithEvents Label48 As Label
+    Friend WithEvents Label49 As Label
+    Friend WithEvents Label50 As Label
+    Friend WithEvents Label51 As Label
+    Friend WithEvents Label52 As Label
+    Friend WithEvents Label53 As Label
+    Friend WithEvents Label54 As Label
+    Friend WithEvents Label55 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Label56 As Label
+    Friend WithEvents Label57 As Label
+    Friend WithEvents Label58 As Label
 End Class
